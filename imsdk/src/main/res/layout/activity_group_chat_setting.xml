@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.chaolu.imsdk.widget.TemplateTitle
+        android:id="@+id/chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:canBack="true"
+        app:titleText="@string/chat_setting_title" />
+
+    <com.chaolu.imsdk.widget.LineControllerView
+        android:id="@+id/idText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:name="@string/chat_setting_group_id" />
+
+    <com.chaolu.imsdk.widget.LineControllerView
+        android:id="@+id/member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canNav="true"
+        app:name="@string/chat_setting_group_member" />
+
+    <com.chaolu.imsdk.widget.LineControllerView
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:name="@string/chat_setting_group_name" />
+
+    <com.chaolu.imsdk.widget.LineControllerView
+        android:id="@+id/groupIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:name="@string/chat_setting_group_introduce" />
+
+    <com.chaolu.imsdk.widget.LineControllerView
+        android:id="@+id/messageNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canNav="true"
+        app:name="@string/chat_setting_group_msg_alert" />
+
+    <com.chaolu.imsdk.widget.LineControllerView
+        android:id="@+id/addOpt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isBottom="true"
+        app:name="@string/chat_setting_group_add_opt" />
+
+    <LinearLayout
+        android:id="@+id/controlInGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/btnDel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_negative_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btnChat"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_positive_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/profile_chat"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/controlOutGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_positive_btn"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/chat_setting_add"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>
