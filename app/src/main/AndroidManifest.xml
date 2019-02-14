@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
 
+
         <!--imsdk activity(start)-->
         <activity
             android:name="com.chaolu.imsdk.ui.ChatActivity"
