@@ -18,7 +18,7 @@ public abstract class Message {
 
     protected final String TAG = "Message";
 
-    TIMMessage message;
+    protected TIMMessage message;
 
     private boolean hasTime;
 
@@ -110,7 +110,7 @@ public abstract class Message {
      */
     public abstract String getSummary();
 
-    String getRevokeSummary() {
+    protected String getRevokeSummary() {
         String revoke_by_self = "你撤回了一条消息";
         String revoke_by_other = "'%1$s'撤回了一条消息";
         if (message.status() == TIMMessageStatus.HasRevoked) {
@@ -186,7 +186,7 @@ public abstract class Message {
      * 显示撤回的消息
      *
      */
-    boolean checkRevoke(ChatAdapter.ViewHolder viewHolder) {
+    protected boolean checkRevoke(ChatAdapter.ViewHolder viewHolder) {
         if (message.status() == TIMMessageStatus.HasRevoked) {
             viewHolder.leftPanel.setVisibility(View.GONE);
             viewHolder.rightPanel.setVisibility(View.GONE);
